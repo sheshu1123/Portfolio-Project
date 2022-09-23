@@ -74,11 +74,7 @@ from PortfolioProject..NashvilleHousing
 select OwnerAddress
 from PortfolioProject..NashvilleHousing
 
-SELECT
-PARSENAME(Replace(OwnerAddress,',','.'),3),
-PARSENAME(Replace(OwnerAddress,',','.'),2),
-PARSENAME(Replace(OwnerAddress,',','.'),1)
-from PortfolioProject..NashvilleHousing
+
 
 ALTER TABLE NashvilleHousing
 Add OwnerSplitAddress Nvarchar(255);
