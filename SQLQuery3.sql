@@ -71,32 +71,6 @@ SET  PropertySplitCity= substring(PropertyAddress,charindex(',',PropertyAddress)
 select *
 from PortfolioProject..NashvilleHousing
 
-select OwnerAddress
-from PortfolioProject..NashvilleHousing
-
-
-
-ALTER TABLE NashvilleHousing
-Add OwnerSplitAddress Nvarchar(255);
-
-Update NashvilleHousing
-SET  OwnerSplitAddress= PARSENAME(Replace(OwnerAddress,',','.'),3)
-
-ALTER TABLE NashvilleHousing
-Add OwnerSplitCity Nvarchar(255);
-
-Update NashvilleHousing
-SET  OwnerSplitCity= PARSENAME(Replace(OwnerAddress,',','.'),2)
-
-
-ALTER TABLE NashvilleHousing
-Add OwnerSplitState Nvarchar(255);
-
-Update NashvilleHousing
-SET  OwnerSplitState= PARSENAME(Replace(OwnerAddress,',','.'),1)
-
-select *
-from PortfolioProject..NashvilleHousing
 
 ----------------------------------------------------------------------
 
